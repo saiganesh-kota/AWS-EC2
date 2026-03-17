@@ -1,0 +1,133 @@
+.section {
+  padding: 6rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sectionLabel {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.sectionTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.sectionSub {
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
+}
+
+.terminal {
+  background: rgba(2, 8, 23, 0.8);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  overflow: hidden;
+  font-family: 'Space Mono', monospace;
+  backdrop-filter: blur(12px);
+  box-shadow: var(--glass-shadow);
+}
+
+.termHeader {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.dotR, .dotY, .dotG { width: 12px; height: 12px; border-radius: 50%; }
+.dotR { background: #ff5f56; }
+.dotY { background: #ffbd2e; }
+.dotG { background: #27c93f; }
+
+.termTitle {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-left: auto;
+  opacity: 0.8;
+}
+
+.termBody { 
+  padding: 2rem;
+  min-height: 300px;
+}
+
+.termLine {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.termPrompt { color: var(--green); font-weight: 700; }
+.termCmd { color: var(--accent); }
+.termOut { padding-left: 1rem; color: #cbd5e1; }
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1.2em;
+  background: var(--accent);
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.statCard {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+
+.statNum {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--accent);
+  font-family: 'Space Mono', monospace;
+  display: block;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 768px) {
+  .section { padding: 4rem 1.5rem; }
+  .termBody { padding: 1.25rem; }
+}
